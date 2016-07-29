@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>{{ title }}</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="description" content="">
+    <meta name="dcterms.description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Stylesheets -->
+    {# stylesheet "/css/main.css" #}
+
+    <!-- Modernizr & Detectizr -->
+    {# script "/js/vendor/modernizr.min.js" #}
+    {# script "/js/vendor/detectizr.min.js" #}
+
+    {# script "/js/vendor/bower/svg4everybody.js" #}
+
+</head>
+<body class="{{ class }}">
+    {% include "partials/header.twig" %}
+
+    <!-- Content -->
+    {% block page %}{% endblock %}
+
+    {% include "partials/footer.twig" %}
+
+    <!-- Vendors -->
+    {# script "/js/vendor/bower/jquery.js" #}
+    {# script "/js/vendor/bower/underscore.js" #}
+    {# script "/js/vendor/bower/webfontloader.js" %}
+
+    <!-- Modules -->
+    {# script "/js/vendor/bower/jquery.moduleName.js" #}
+
+    <!-- Main file -->
+    {# script "/js/main.js" #}
+</body>
+</html>
