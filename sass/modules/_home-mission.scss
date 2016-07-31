@@ -1,0 +1,29 @@
+.home-mission-bottom {
+    height: 650px;
+    background: url('../../img/mission-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.home-mission-bottom-text {
+    width: 260px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 650px;
+    background-color: rgba(231, 231, 231, 0.9);
+}
+
+.home-missions-bottom-text-list {
+    display: flex;
+    justify-content: space-between ;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    list-style: none;
+    li {
+        font-family: 'Nunito', sans-serif;
+        @include rem-typo(26px);
+        text-align: center;
+    }
+}

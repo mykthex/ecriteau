@@ -1,0 +1,27 @@
+.l-header {
+    background-color: $c-bleu-foncee;
+    padding: 10px 0;
+    .l-page-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-slogan {
+    text-align: right;
+}
+
+.header-slogan-title {
+    @include rem-typo(29px);
+    color: #ffffff;
+    margin-bottom: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.header-slogan-headlines {
+    @include rem-typo(22px);
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+}

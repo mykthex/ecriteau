@@ -4,6 +4,13 @@
 {% set class = "" %}
 
 {% block content %}
-    <p>lol</p>
-    <h2>{{msg}}</h2>
+    {% include "partials/home/home-slider.twig" %}
+    {% include "partials/home/home-partners.twig" %}
+    {% include "partials/home/home-mission.twig" %}
+    {% include "partials/home/home-services.twig" %}
+    {% include "partials/home/home-clienteles.twig" %}
+    {% include "partials/home/home-equipe.twig" %}
+    {% include "partials/home/home-emplois.twig" %}
+    {% include "partials/home/home-locations.twig" %}
+    {% include "partials/home/home-contact.twig" %}
 {% endblock %}

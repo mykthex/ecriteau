@@ -1,0 +1,15 @@
+.home-section-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0 25px 0;
+    p {
+        max-width: 750px;
+        text-align: center;
+    }
+}
+
+.home-section-bottom {
+    padding: 25px 0 50px 0;
+}

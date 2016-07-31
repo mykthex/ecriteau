@@ -1,0 +1,12 @@
+.is-grey-bg {
+    background-color: $c-gris-pale;
+    position: relative;
+    &:before {
+        content: "";
+        width: 100vw;
+        z-index: -1;
+        background-color: $c-gris-pale;
+        height: 100%;
+        @include absolute-center;
+    }
+}

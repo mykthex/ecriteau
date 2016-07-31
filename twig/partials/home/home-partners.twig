@@ -1,0 +1,12 @@
+<section class="home-partners">
+    <div class="l-page-wrapper">
+        <h2 class="dashed-left">partenaires</h2>
+        <div class="partners-wrapper">
+            {% for partner in 1..5 %}
+                <div class="partner-item">
+                    <img src="img/logo/partners{{loop.index}}.png" class="partner-item-img">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

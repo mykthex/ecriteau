@@ -1,15 +1,56 @@
-//colors
-$bleu: #3498db;
-$bleuFoncee: #347eb5;
-$orange: #e67e22;
-$orangeFoncee: #d35400;
-$orangeMilieu: #f78928;
-$orangeErreur: #c85305;
-$vert: #7abc1a;
-$vertFoncee: #68a016;
-$cloud: #ecf0f1;
-$cloudFoncee: #e5e6e7;
-$gris: #434544;
-$grisPale: #c4c1be;
-$grisMoyen: #9d9d9d;
-$grisFoncee: #383939;
+// --------------------------------- //
+//           Variables            //
+// --------------------------------- //
+$spacing-default: 40px;
+$spacing-tablet: 30px;
+$spacing-mobile: 20px;
+$document-width: 1280px;
+$sidebar-width: 220px;
+$sidebar-margin: 20px;
+
+$mq-breakpoints: (
+    'mobile': (
+        min: false,
+        max: 767px,
+        grid: true,
+        export: true
+    ),
+    'tablet': (
+        min: 768px,
+        max: 1024px,
+        grid: true,
+        export: true
+    ),
+    'desktop': (
+        min: 1025px,
+        max: false,
+        grid: true,
+        export: true
+    ),
+    'mobile-tablet': (
+        min: false,
+        max: 1024px,
+        grid: false,
+        export: false
+    ),
+    'document-width': (
+        min: false,
+        max: $document-width,
+        grid: false,
+        export: false
+    )
+);
+
+// ------------------------------ //
+//           Colors            //
+// ------------------------------ //
+
+$c-bleu: #3788cc;
+$c-bleu-pale: #4ebeff;
+$c-bleu-foncee: #2c82c9;
+
+$c-gris-dark: #282830;
+$c-gris-pale: #e7e7e7;
+
+$c-txt-default: $c-gris-dark;
+$c-txt-links: $c-gris-dark;

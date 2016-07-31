@@ -1,0 +1,6 @@
+.btn-outline {
+    border: 1px solid $c-gris-dark;
+    border-radius: 5px;
+    @include rem-typo(15px);
+    padding: 5px 10px;
+}

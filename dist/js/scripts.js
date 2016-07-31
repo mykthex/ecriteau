@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".slider").slider({noCss:!1,displayedSlides:1,slidesGutter:0,createArrowsNavigation:!0,createPagesNavigation:!0,createActiveContentNavigation:!1,displayPageNumber:!0,displayFirstActiveContent:!1,swipe:!0,autoplay:!0,autoplayDelay:3e3,infiniteLoop:!0,animationSpeed:300}),console.log("ready")});

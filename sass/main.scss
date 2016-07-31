@@ -1,13 +1,14 @@
-//Fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+// Settings
+@import 'settings/mixins';
+@import 'settings/variables';
+
+// Base
+@import 'vendor/normalize';
+@import 'base/*';
 
 // Import all files
-@import 'settings/variables';
-@import 'settings/mixins';
+@import 'layout/*';
 
 // Modules
-
 @import 'modules/*';
-//Media queries
-@import 'layout/*';
+
