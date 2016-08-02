@@ -1,0 +1,19 @@
+.home-emplois-bottom{
+    display: flex;
+}
+
+.home-emplois-left {
+    flex-basis: 45%;
+}
+
+.home-emplois-right {
+    flex-basis: 55%;
+    margin-left: 40px;
+}
+
+.home-emplois-ultimate-button {
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    padding: 0 0 50px 0;
+}

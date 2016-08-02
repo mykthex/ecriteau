@@ -3,4 +3,27 @@
     border-radius: 5px;
     @include rem-typo(15px);
     padding: 5px 10px;
+    background-color: transparent;
+    &:hover {
+        text-decoration: none;
+    }
+    &.is-big {
+        @include rem-typo(22px);
+        font-weight: 500;
+        padding: 10px 15px;
+        border-width: 2px;
+    }
+    &.is-long {
+        @include rem-typo(22px);
+        padding: 5px 25px;
+    }
+    &.is-icon-button {
+        padding-left: 75px;
+        padding-right: 20px;
+        background: url('../../img/icons/icon-mail.png') no-repeat left 15px center;
+    }
+    &.is-white {
+        border-color: #ffffff;
+        color: #ffffff;
+    }
 }

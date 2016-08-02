@@ -1,3 +1,37 @@
 .home-locations-bottom {
     height: 500px;
+    position: relative;
+    .map1 {
+        height: 100%;
+    }
+}
+
+.location-window-wrapper {
+    width: 1280px;
+}
+
+.location-window {
+    position: absolute;
+    padding: 20px;
+    right: 20px;
+    @include absolute-vertical-center;
+    color: #ffffff;
+    background-color: rgba(40, 40 ,48, 0.90);
+    width: 285px;
+    height: 295px;
+    h3 {
+        @include rem-typo(22px);
+        color: #ffffff;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+    span {
+        font-weight: 500;
+    }
+    .contact-icon-text {
+        margin-top: 10px;
+        & + & {
+            margin-top: 10px;
+        }
+    }
 }

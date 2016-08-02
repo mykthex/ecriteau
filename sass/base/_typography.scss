@@ -32,9 +32,17 @@ h6, .h6 {
     @include rem-typo(11px);
 }
 
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
 p, li, button {
     color: $c-txt-default;
     @include rem-typo(16px);
+    font-family: 'Catamaran', sans-serif;
+}
+
+input {
     font-family: 'Catamaran', sans-serif;
 }
 
@@ -86,5 +94,11 @@ p {
         width: 50px;
         background-color: $c-bleu-foncee;
         @include absolute-vertical-center;
+    }
+    &.is-white {
+        color: #ffffff;
+        &:before, &:after {
+            background-color: #ffffff;
+        }
     }
 }
