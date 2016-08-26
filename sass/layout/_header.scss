@@ -8,8 +8,52 @@
     }
 }
 
+.header-logo {
+    @include respond-to(mobile) {
+        width: 75px;
+    }
+}
+
+.header-right-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.navbar-toggle {
+    display: none;
+    position: relative;
+    padding: 9px 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: $c-gris-pale;
+    background-image: none;
+    .icon-bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $c-gris-dark;
+        & + .icon-bar {
+            margin-top: 4px;
+        }
+    }
+    @include respond-to(tablet) {
+        display: inline-block;
+        margin-left: 25px;
+    }
+    @include respond-to(mobile) {
+        display: inline-block;
+        margin-left: 0;
+    }
+}
+
+
 .header-slogan {
     text-align: right;
+    @include respond-to(mobile) {
+        display: none;
+    }
 }
 
 .header-slogan-title {
@@ -18,10 +62,16 @@
     margin-bottom: 0;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
+    @include respond-to(tablet) {
+        @include rem-typo(22px);
+    }
 }
 
 .header-slogan-headlines {
     @include rem-typo(22px);
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
+    @include respond-to(tablet) {
+        @include rem-typo(16px);
+    }
 }

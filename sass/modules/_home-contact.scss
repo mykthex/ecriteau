@@ -7,20 +7,33 @@
 
 .home-contact-bottom {
     display: flex;
+    @include respond-to(mobile) {
+        flex-direction: column;
+    }
 }
 
 .home-contact-bottom-left {
     flex-basis: 33%;
+    @include respond-to(mobile) {
+        flex-basis: 100%;
+    }
 }
 
 .home-contact-bottom-right {
     flex-basis: 33%;
     display: flex;
     justify-content: center;
+    @include respond-to(mobile) {
+        flex-basis: 100%;
+    }
 }
 
 .home-contact-bottom-center {
     flex-basis: 33%;
+    @include respond-to(mobile) {
+        flex-basis: 100%;
+        margin: 25px 0 40px 0;
+    }
 }
 
 .contact-icon-text {
@@ -28,6 +41,9 @@
     align-items: flex-start;
     & + & {
         margin-top: 40px;
+        @include respond-to(mobile) {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -100,5 +116,19 @@
     @include rem-typo(18px, 18px);
     span + span {
         margin-top: 5px;
+    }
+}
+
+.errors-wrapper {
+    background-color: #e26e67;
+    padding: 10px;
+    margin-bottom: 15px;
+    p {
+        font-weight: 400;
+        color: #ffffff;
+    }
+    .main-error {
+        color: #ffffff;
+        @include rem-typo(18px);
     }
 }

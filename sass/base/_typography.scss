@@ -14,10 +14,16 @@ h1, .h1 {
 
 h2, .h2 {
     @include rem-typo(32px);
+    @include respond-to(mobile) {
+        @include rem-typo(26px);
+    }
 }
 
 h3, .h3 {
     @include rem-typo(22px);
+    @include respond-to(mobile) {
+        @include rem-typo(20px);
+    }
 }
 
 h4, .h4 {
@@ -76,9 +82,14 @@ p {
 .dashed-title {
     padding: 0 70px;
     position: relative;
+    text-align: center;
     display: inline-block;
     @include rem-typo(40px);
     margin-bottom: 20px;
+    @include respond-to(mobile) {
+        @include rem-typo(32px);
+        padding: 0 50px;
+    }
     &:before {
         content: '';
         height: 3px;
@@ -86,6 +97,9 @@ p {
         width: 50px;
         background-color: $c-bleu-foncee;
         @include absolute-vertical-center;
+        @include respond-to(mobile) {
+            width: 35px;
+        }
     }
     &:after {
         content: '';
@@ -94,6 +108,9 @@ p {
         width: 50px;
         background-color: $c-bleu-foncee;
         @include absolute-vertical-center;
+        @include respond-to(mobile) {
+            width: 35px;
+        }
     }
     &.is-white {
         color: #ffffff;

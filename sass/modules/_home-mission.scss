@@ -2,6 +2,9 @@
     height: 650px;
     background: url('../../img/mission-bg.jpg') center no-repeat;
     background-size: cover;
+    .l-page-wrapper {
+        height: 100%;
+    }
 }
 
 .home-mission-bottom-text {
@@ -11,6 +14,12 @@
     top: 0;
     height: 650px;
     background-color: rgba(231, 231, 231, 0.9);
+    @include respond-to(mobile) {
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        top: auto;
+    }
 }
 
 .home-missions-bottom-text-list {
@@ -21,9 +30,15 @@
     align-items: center;
     padding: 25px;
     list-style: none;
+    @include respond-to(mobile) {
+        padding: 15px;
+    }
     li {
         font-family: 'Nunito', sans-serif;
         @include rem-typo(26px);
         text-align: center;
+        @include respond-to(mobile) {
+            @include rem-typo(18px);
+        }
     }
 }

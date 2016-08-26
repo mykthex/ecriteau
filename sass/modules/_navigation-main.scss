@@ -4,12 +4,36 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include respond-to(mobile-tablet) {
+            display: none;
+            flex-direction: column;
+            padding: 0;
+        }
         .toplevel-item {
             margin: 0 15px;
+            @include respond-to(mobile-tablet) {
+                border-bottom: 1px solid $c-gris-dark;
+                margin: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
         }
         a {
             @include rem-typo(22px);
             font-weight: 500;
+            @include respond-to(mobile-tablet) {
+                padding: 8px 15px;
+                width: 100%;
+                display: block;
+                @include rem-typo(18px);
+            }
+            &:hover {
+                text-decoration: none;
+                @include respond-to(mobile-tablet) {
+                    background-color: $c-gris-pale;
+                }
+            }
         }
     }
 }

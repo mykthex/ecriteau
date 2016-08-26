@@ -1,4 +1,10 @@
 .home-slider {
+    background-color: #19191e;
+    position: relative;
+    .slider {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
     .slide {
         img {
             width: 100%;
@@ -6,5 +12,256 @@
     }
     .slider-navigation {
         display: none;
+    }
+}
+
+.l-bulles-wrapper {
+    @include absolute-center;
+    height: 100%;
+}
+
+.bulle-wrapper {
+    position: absolute;
+    &.bulle1 {
+        left: 40px;
+        top: 60px;
+        -webkit-animation: bulleUn 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+           -moz-animation: bulleUn 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: bulleUn 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &.bulle2 {
+        top: 35px;
+        right: 50px;
+        -webkit-animation: bulleDeux 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+           -moz-animation: bulleDeux 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: bulleDeux 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &.bulle3 {
+        right: 70px;
+        bottom: 70px;
+        -webkit-animation: bulleTrois 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+           -moz-animation: bulleTrois 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: bulleTrois 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+.bulle {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.bulle1 {
+        background-color: #196aac;
+        animation: bullesMovesUn 3500ms 1500ms cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+    }
+    &.bulle2 {
+        background-color: #d3113c;
+        animation: bullesMovesDeux 3500ms 1500ms cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+    }
+    &.bulle3 {
+        background-color: #00a79d;
+        animation: bullesMovesTrois 3500ms 1500ms cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+    }
+}
+
+.bulle-texte {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    @include rem-typo(30px, 30px);
+}
+
+// Bulle1
+@-webkit-keyframes bulleUn {
+    0% {
+        left: -500px;
+        top: 200px;
+    }
+    50% {
+        left: -500px;
+        top: 200px;
+    }
+    100% {
+        left: 40px;
+        top: 60px;
+    }
+}
+
+@-moz-keyframes bulleUn {
+    0% {
+        left: -500px;
+        top: 200px;
+    }
+    50% {
+        left: -500px;
+        top: 200px;
+    }
+    100% {
+        left: 40px;
+        top: 60px;
+    }
+}
+
+@keyframes bulleUn {
+    0% {
+        left: -500px;
+        top: 200px;
+    }
+    50% {
+        left: -500px;
+        top: 200px;
+    }
+    100% {
+        left: 40px;
+        top: 60px;
+    }
+}
+
+// Bulle 2
+@-webkit-keyframes bulleDeux {
+    0% {
+        right: -500px;
+        top: -200px;
+    }
+    50% {
+        right: -500px;
+        top: -200px;
+    }
+    100% {
+        top: 35px;
+        right: 50px;
+    }
+}
+
+@-moz-keyframes bulleDeux {
+    0% {
+        right: -500px;
+        top: -200px;
+    }
+    50% {
+        right: -500px;
+        top: -200px;
+    }
+    100% {
+        top: 35px;
+        right: 50px;
+    }
+}
+
+@keyframes bulleDeux {
+    0% {
+        right: -500px;
+        top: -200px;
+    }
+    50% {
+        right: -500px;
+        top: -200px;
+    }
+    100% {
+        top: 35px;
+        right: 50px;
+    }
+}
+
+//Bulle 3
+@-webkit-keyframes bulleTrois {
+    0% {
+        right: -500px;
+        bottom: 200px;
+    }
+    50% {
+        right: -500px;
+        bottom: 200px;
+    }
+    100% {
+        right: 70px;
+        bottom: 70px;
+    }
+}
+
+@-moz-keyframes bulleTrois {
+    0% {
+        right: -500px;
+        bottom: 600px;
+    }
+    50% {
+        right: -500px;
+        bottom: 200px;
+    }
+    100% {
+        right: 70px;
+        bottom: 70px;
+    }
+}
+
+@keyframes bulleTrois {
+    0% {
+        right: -500px;
+        bottom: -500px;
+    }
+    50% {
+        right: -500px;
+        bottom: -500px;
+    }
+    100% {
+        right: 70px;
+        bottom: 70px;
+    }
+}
+
+// Bulles en général
+@keyframes bullesMovesUn {
+    0% {
+         transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(1px) translateY(0);
+    }
+    50% {
+        transform: translateX(0px) translateY(1px);
+    }
+    75% {
+        transform: translateX(1px) translateY(0px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes bullesMovesDeux {
+    0% {
+         transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(1px) translateY(1px);
+    }
+    50% {
+        transform: translateX(0px) translateY(2px);
+    }
+    75% {
+        transform: translateX(-1px) translateY(3px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes bullesMovesTrois {
+    0% {
+         transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(1px) translateY(1px);
+    }
+    50% {
+        transform: translateX(0) translateY(0);
+    }
+    75% {
+        transform: translateX(-1px) translateY(1px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
     }
 }

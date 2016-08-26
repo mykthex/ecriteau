@@ -99,3 +99,7 @@ samp {
     background: #000;
     text-shadow: none;
 }
+
+.visuallyhidden {
+    @include visuallyhidden;
+}

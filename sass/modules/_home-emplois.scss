@@ -1,19 +1,28 @@
-.home-emplois-bottom{
+.home-emplois-bottom {
     display: flex;
+    @include respond-to(mobile) {
+        flex-direction: column;
+    }
 }
 
 .home-emplois-left {
     flex-basis: 45%;
+    @include respond-to(mobile) {
+        text-align: center;
+    }
 }
 
 .home-emplois-right {
     flex-basis: 55%;
     margin-left: 40px;
+    @include respond-to(mobile) {
+        margin: 25px 0 0 0;
+    }
 }
 
 .home-emplois-ultimate-button {
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     display: flex;
     padding: 0 0 50px 0;
 }

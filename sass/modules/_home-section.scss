@@ -4,6 +4,9 @@
     justify-content: center;
     flex-direction: column;
     padding: 40px 0 25px 0;
+    @include respond-to(mobile) {
+        padding: 25px 0 15px;
+    }
     p {
         max-width: 600px;
         text-align: center;
@@ -12,4 +15,7 @@
 
 .home-section-bottom {
     padding: 25px 0 50px 0;
+    @include respond-to(mobile) {
+        padding: 20px 0 30px;
+    }
 }

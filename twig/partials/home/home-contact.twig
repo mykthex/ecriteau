@@ -1,4 +1,4 @@
-<section class="home-contact is-blue-bg">
+<section class="home-contact is-blue-bg" id="contact">
     <div class="l-page-wrapper">
         <div class="home-contact-top home-section-top">
             <h2 class="dashed-title is-white">contact</h2>
@@ -28,7 +28,15 @@
                 </div>
             </div>
             <div class="home-contact-bottom-center">
-                <form action="" class="home-contact-form">
+                {% if errors %}
+                <div class="errors-wrapper">
+                <h3 class="main-error">Il y a des erreurs dans le formulaire.</h3>
+                {% for error in errors %}
+                    <p>{{error}}</p>
+                {% endfor %}
+                </div>
+                {% endif %}
+                <form action="#contact" method="POST" class="home-contact-form">
                     <div class="fields">
                         <div class="field">
                             <label for="nom" class="visuallyhidden">Nom</label>

@@ -1,5 +1,5 @@
 .home-locations-bottom {
-    height: 500px;
+    height: 550px;
     position: relative;
     .map1 {
         height: 100%;
@@ -18,7 +18,11 @@
     color: #ffffff;
     background-color: rgba(40, 40 ,48, 0.90);
     width: 285px;
-    height: 295px;
+    height: 320px;
+    display: none;
+    &.is-active {
+        display: block;
+    }
     h3 {
         @include rem-typo(22px);
         color: #ffffff;

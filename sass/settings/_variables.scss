@@ -9,6 +9,12 @@ $sidebar-width: 220px;
 $sidebar-margin: 20px;
 
 $mq-breakpoints: (
+    'small-mobile': (
+        min: false,
+        max: 480px,
+        grid: true,
+        export: true
+    ),
     'mobile': (
         min: false,
         max: 767px,
