@@ -3,31 +3,59 @@
     position: relative;
     .map1 {
         height: 100%;
+        @include respond-to(mobile) {
+            height: 300px;
+        }
+    }
+    @include respond-to(mobile) {
+        height: auto;
     }
 }
 
 .location-window-wrapper {
     width: 1280px;
+    @include respond-to(mobile) {
+        width: auto;
+    }
 }
 
 .location-window {
-    position: absolute;
     padding: 20px;
     right: 20px;
-    @include absolute-vertical-center;
     color: #ffffff;
-    background-color: rgba(40, 40 ,48, 0.90);
-    width: 285px;
-    height: 320px;
-    display: none;
+    background-color: rgba(40, 40 ,48, 0.93);
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    @include transition(opacity 300ms);
+    @include absolute-vertical-center;
+    @include respond-to(mobile) {
+        position: static;
+        @include transform(none);
+        width: 100%;
+        padding: 0;
+    }
+    @include respond-to(small-mobile) {
+        width: 100%;
+    }
     &.is-active {
-        display: block;
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+        @include respond-to(mobile) {
+            height: auto;
+            padding: 20px;
+        }
     }
     h3 {
         @include rem-typo(22px);
         color: #ffffff;
         margin-bottom: 0;
         font-weight: 500;
+        @include respond-to(mobile) {
+            @include rem-typo(18px);
+        }
     }
     span {
         font-weight: 500;
@@ -37,5 +65,48 @@
         & + & {
             margin-top: 10px;
         }
+    }
+    .contact-icon-text-text {
+        @include respond-to(mobile) {
+            @include rem-typo(16px);
+        }
+    }
+}
+
+.map-lock {
+    background-color: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+    border: 0;
+    pointer-events: none;
+    @include transition(opacity 1000ms);
+    @include absolute-center;
+    @include respond-to(mobile) {
+        @include transform(none);
+        height: 300px;
+        top: 0;
+        left: 0;
+    }
+}
+
+.map-lock-content {
+    padding: 11px 13px 9px 13px;
+    bottom: 0;
+    background-color: rgba(44, 130, 201, 0.8);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    @include absolute-horizontal-center;
+    @include respond-to(mobile) {
+        width: 265px;
+    }
+    img {
+        margin-right: 10px;
+    }
+}
+
+.map1 {
+    &.is-active ~ .map-lock {
+        opacity: 0;
     }
 }

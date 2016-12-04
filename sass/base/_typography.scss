@@ -84,10 +84,10 @@ p {
     position: relative;
     text-align: center;
     display: inline-block;
-    @include rem-typo(40px);
+    @include rem-typo(40px, 45px);
     margin-bottom: 20px;
     @include respond-to(mobile) {
-        @include rem-typo(32px);
+        @include rem-typo(32px, 35px);
         padding: 0 50px;
     }
     &:before {

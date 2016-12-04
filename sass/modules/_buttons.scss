@@ -3,9 +3,12 @@
     border-radius: 5px;
     @include rem-typo(15px);
     padding: 5px 10px;
+    @include transition(all 600ms);
     background-color: transparent;
     &:hover {
         text-decoration: none;
+        background-color: #d2dde4;
+        @include transform(translateY(2px));
     }
     &.is-big {
         @include rem-typo(22px);
@@ -21,9 +24,17 @@
         padding-left: 75px;
         padding-right: 20px;
         background: url('../../img/icons/icon-mail.png') no-repeat left 15px center;
+        &:hover {
+            text-decoration: none;
+            background-color: #d2dde4;
+        }
     }
     &.is-white {
         border-color: #ffffff;
         color: #ffffff;
+        &:hover {
+            background-color: rgba(62,62,62,0.2);
+            border-color: $c-gris-pale;
+        }
     }
 }

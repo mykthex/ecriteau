@@ -6,16 +6,16 @@
 
     <meta charset="UTF-8">
 
-    <meta name="description" content="">
-    <meta name="dcterms.description" content="" />
+    <meta name="description" content="L’Écriteau est une clinique d’orthopédagogie de Québec. Ses orthopédagogues viennent en aide aux personnes qui ont des difficultés ou troubles d’apprentissage.">
+    <meta name="dcterms.description" content="L’Écriteau est une clinique d’orthopédagogie de Québec. Ses orthopédagogues viennent en aide aux personnes qui ont des difficultés ou troubles d’apprentissage." />
     <meta name="keywords" content="" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="" />
+    <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:description" content="" />
+    <meta property="og:image" content="/img/slider/v2/slide1.jpg" />
+    <meta property="og:url" content="http://orthopedagogielecriteau.ca/" />
+    <meta property="og:description" content="L’Écriteau est une clinique d’orthopédagogie de Québec. Ses orthopédagogues viennent en aide aux personnes qui ont des difficultés ou troubles d’apprentissage." />
 
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,8 +34,6 @@
     <script src="js/vendor/modernizr.min.js"></script>
     <script src="js/vendor/detectizr.min.js"></script>
 
-    {# script "/js/vendor/bower/svg4everybody.js" #}
-
 </head>
 <body>
     {% include "partials/header.twig" %}
@@ -53,6 +51,17 @@
     <script src="js/modules/jquery.slider.min.js"></script>
     <script src="js/modules/jquery.customMap.min.js"></script>
     <script src="js/modules/menu.js"></script>
+
+    <!-- Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45501671-5', 'auto');
+      ga('send', 'pageview');
+    </script>
 
     <!-- Main file -->
     <script src="dist/js/scripts.js"></script>

@@ -1,7 +1,9 @@
 .home-emplois-bottom {
     display: flex;
+    align-items: center;
     @include respond-to(mobile) {
         flex-direction: column;
+        align-items: stretch;
     }
 }
 
@@ -9,6 +11,7 @@
     flex-basis: 45%;
     @include respond-to(mobile) {
         text-align: center;
+        flex-basis: auto;
     }
 }
 
@@ -17,6 +20,10 @@
     margin-left: 40px;
     @include respond-to(mobile) {
         margin: 25px 0 0 0;
+        flex-basis: auto;
+    }
+    ul {
+        margin-left: 30px;
     }
 }
 

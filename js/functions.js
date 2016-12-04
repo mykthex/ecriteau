@@ -12,7 +12,7 @@ $(document).ready(function() {
         displayFirstActiveContent: false,
         swipe: true,
         autoplay: true,
-        autoplayDelay: 8000,
+        autoplayDelay: 5000,
         infiniteLoop: true,
         animationSpeed: 300,
     });
@@ -22,6 +22,7 @@ $(document).ready(function() {
         markersSelector: '.marker',
         htmlMarkers: true,
         hideHtmlMarkers: false,
+        markerActive: 1,
         lat: 46.830396,
         lng: -71.300340,
         zoom: 12,
@@ -32,7 +33,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).on('click', 'a', function(event){
+$(document).on('click', '.nav-main-link', function(event){
     event.preventDefault();
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top

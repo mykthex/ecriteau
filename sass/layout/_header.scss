@@ -1,6 +1,9 @@
 .l-header {
     background-color: $c-bleu-foncee;
-    padding: 10px 0;
+    padding: 15px 0;
+    @include respond-to(mobile) {
+        padding: 12px 0;
+    }
     .l-page-wrapper {
         display: flex;
         justify-content: space-between;
@@ -9,8 +12,11 @@
 }
 
 .header-logo {
+    @include respond-to(tablet) {
+        width: 100px;
+    }
     @include respond-to(mobile) {
-        width: 75px;
+        width: 60px;
     }
 }
 
@@ -26,14 +32,14 @@
     padding: 9px 8px;
     border: 1px solid transparent;
     border-radius: 4px;
-    background-color: $c-gris-pale;
+    background-color: $c-gris-dark;
     background-image: none;
     .icon-bar {
         display: block;
         width: 20px;
         height: 2px;
         border-radius: 1px;
-        background-color: $c-gris-dark;
+        background-color: $c-gris-pale;
         & + .icon-bar {
             margin-top: 4px;
         }

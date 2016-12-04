@@ -15,7 +15,7 @@
 .home-contact-bottom-left {
     flex-basis: 33%;
     @include respond-to(mobile) {
-        flex-basis: 100%;
+        flex-basis: auto;
     }
 }
 
@@ -24,14 +24,14 @@
     display: flex;
     justify-content: center;
     @include respond-to(mobile) {
-        flex-basis: 100%;
+        flex-basis: auto;
     }
 }
 
 .home-contact-bottom-center {
     flex-basis: 33%;
     @include respond-to(mobile) {
-        flex-basis: 100%;
+        flex-basis: auto;
         margin: 25px 0 40px 0;
     }
 }
@@ -58,6 +58,9 @@
     .id-wrapper {
         width: 30px;
         display: inline-block;
+    }
+    a {
+        color: #ffffff;
     }
 }
 
@@ -105,13 +108,18 @@
     }
 }
 
-.social-media-follow-wrapper {
+.social-media-follow-wrapper-link {
+    color: #ffffff;
     display: flex;
     align-items: flex-start;
+    @include transition(all 300ms);
+    &:hover {
+        @include transform(translateY(2px));
+        text-decoration: none;
+    }
 }
 
 .social-media-follow-text {
-    color: #ffffff;
     margin-left: 10px;
     @include rem-typo(18px, 18px);
     span + span {
@@ -126,9 +134,18 @@
     p {
         font-weight: 400;
         color: #ffffff;
+        margin-bottom: 5px;
     }
     .main-error {
         color: #ffffff;
+        margin-bottom: 8px;
         @include rem-typo(18px);
     }
+}
+
+.success-message {
+    background-color: #71ba51;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
 }

@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var cssGlobbing = require('gulp-css-globbing');
+var autoprefixer = require('gulp-autoprefixer');
 
 var sass_config = {
     indentWidth: 4,
@@ -20,6 +21,10 @@ gulp.task('styles',  function() {
             }
         }))
         .pipe(sass(sass_config))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest( 'dist/css/'));
 });
 

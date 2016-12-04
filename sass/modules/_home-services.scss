@@ -1,6 +1,6 @@
 .home-services-bottom {
     display: flex;
-    align-items: stretch ;
+    align-items: flex-start;
     flex-grow: 1;
     @include respond-to(1000px) {
         flex-wrap: wrap;
@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-right: 1px solid $c-gris-dark;
     &:last-child {
         border: 0;
     }

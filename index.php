@@ -14,7 +14,7 @@ if(isset($_POST["courriel"])) {
     $arrErrors =  array();
     if($_POST["name"] == "") {
         $formValide = false;
-        $arrErrors["nom"] = "Le nom est requis.";
+        $arrErrors["name"] = "Le nom est requis.";
     }
     if($_POST["message"] == "") {
         $formValide = false;
@@ -26,19 +26,20 @@ if(isset($_POST["courriel"])) {
     }
     // Send mail
     if($formValide == true) {
-        $to  = "mykaeladam@gmail.com";
-        $subject = "Nouveau message - Contact pour l\'écriteau";
-        $message = "<h2>Nouveau message de la part de: " . $_POST["nom"] . "</h2><br>";
+        $to  = "info@ecriteau.ca";
+        $subject = "Nouveau message - Contact pour l'écriteau";
+        $message = "<h2>Nouveau message de la part de: " . $_POST["name"] . "</h2>";
         $message .= "<p>" . $_POST["message"] . "</p>";
         $message .= "Message de la part de ecriteau.ca.";
-        $headers = "From:" . $_POST["courriel"] . "\r\n" .
-            "Reply-To:" . $_POST["courriel"] . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
+        $headers = "From: " . strip_tags($_POST['courriel']) . "\r\n";
+        $headers .= "Reply-To: " . strip_tags($_POST['courriel']) . "\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
         mail($to, $subject, $message, $headers);
-        echo $tpl->render(array());
+        echo $tpl->render(array("success"=> true));
     } else {
-        echo $tpl->render(array("errors"=> $arrErrors));
+        echo $tpl->render(array("errors"=> $arrErrors, "postContent" => $_POST));
     }
 } else {
     echo $tpl->render(array());
